@@ -40,6 +40,14 @@ public class PerfilesController {
 		return "perfiles/formPerfil";
 	}
 	
+	@GetMapping("/detalles")
+	public String detalles(@RequestParam("id") int idPerfiles,
+			Model model) {
+		System.out.println("idPerfiles : " + idPerfiles);
+		model.addAttribute("perfiles", perfilesService.buscarPorId(idPerfiles));
+		return "perfiles/detalles";
+	}
+	
 	@GetMapping("/eliminar")
 	public String eliminar(@RequestParam("id") int idPerfil,
 			RedirectAttributes atributo) {
