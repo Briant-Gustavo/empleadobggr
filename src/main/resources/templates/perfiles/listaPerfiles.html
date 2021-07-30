@@ -47,7 +47,6 @@
                   <td th:text="${perfil.perfil}"></td>
                   <td>
                     <a th:href="@{/perfiles/buscar(id=${perfil.id})}" class="btn btn-secondary btn-sm" role="button" title="Editar"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
-                    <a th:href="@{/perfiles/detalles(id=${perfil.id})}" class="btn btn-secondary btn-sm" role="button" title="Detalles del perfil."><i class="far fa-file-alt"></i></a>
                     <a th:href="@{/perfiles/eliminar(id=${perfil.id})}" onclick="return confirm('¿Estas seguro?')" class="btn btn-danger btn-sm" role="button" title="Eliminar"><i class="fas fa-trash" aria-hidden="true"></i></a>
                   </td>
                 </tr>         
