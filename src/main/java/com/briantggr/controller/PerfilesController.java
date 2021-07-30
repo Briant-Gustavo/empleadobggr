@@ -44,7 +44,7 @@ public class PerfilesController {
 	public String detalles(@RequestParam("id") int idPerfiles,
 			Model model) {
 		System.out.println("idPerfiles : " + idPerfiles);
-		model.addAttribute("perfiles", perfilesService.buscarPorId(idPerfiles));
+		model.addAttribute("perfil", perfilesService.buscarPorId(idPerfiles));
 		return "perfiles/detalles";
 	}
 	
